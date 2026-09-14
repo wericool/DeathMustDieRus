@@ -1,3 +1,4 @@
 *.pre_narr
 *.bak
 __pycache__/
+backup_game/

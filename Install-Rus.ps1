@@ -4,7 +4,7 @@
 
     Что делает:
       1. находит папку игры Death Must Die;
-      2. сохраняет оригинальные файлы в ..\backup_game (для удаления);
+      2. сохраняет оригинальные файлы в backup_game рядом со скриптом (для удаления);
       3. подменяет английские таблицы строк русскими (и болгарские — на случай,
          если игра когда-нибудь переключится на локаль bg);
       4. отключает CRC у изменённых Addressables-бандлов в catalog.json
@@ -114,7 +114,7 @@ if ($proc) {
 }
 
 # ---------------------------------------------------------------- резервные копии
-$backup = Join-Path $PSScriptRoot '..\backup_game'
+$backup = Join-Path $PSScriptRoot 'backup_game'
 $bWin   = Join-Path $backup 'StandaloneWindows64'
 New-Item -ItemType Directory -Force -Path $bWin | Out-Null
 Write-Step "Резервная копия оригиналов -> $backup"

@@ -2,7 +2,7 @@
     Death Must Die — удаление русификатора
     ======================================
 
-    Возвращает игру в исходное состояние: восстанавливает из ..\backup_game
+    Возвращает игру в исходное состояние: восстанавливает из backup_game (рядом со скриптом)
     английские/болгарские таблицы строк, catalog.json и оригинальные
     sharedassets0.assets / resources.assets.
 
@@ -64,7 +64,7 @@ $data  = Join-Path $game 'Death Must Die_Data'
 $aa    = Join-Path $data 'StreamingAssets\aa'
 $aaWin = Join-Path $aa 'StandaloneWindows64'
 
-$backup = Join-Path $PSScriptRoot '..\backup_game'
+$backup = Join-Path $PSScriptRoot 'backup_game'
 if (-not (Test-Path $backup)) {
     Write-Err "Не найдена папка резервных копий: $backup"
     Write-Host "Удаление невозможно — оригинальные файлы не сохранены."
