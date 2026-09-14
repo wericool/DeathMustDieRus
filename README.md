@@ -21,19 +21,22 @@
 
 ## Установка
 
-1. Скачай репозиторий (Code → Download ZIP) или `git clone`.
-2. Закрой игру.
-3. Запусти:
+**Простой способ:** распакуй ZIP и дважды кликни `УСТАНОВИТЬ-русификатор.bat`. Всё.
+
+Установщик сам найдёт игру через Steam, сделает резервную копию заменяемых файлов
+и выставит язык en в настройках игры (русский подставлен именно вместо английского).
+Ничего дополнительно ставить не нужно — используется встроенный в Windows PowerShell.
+
+**Ручной способ** (то же самое, с возможностью указать путь к игре):
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File Install-Rus.ps1
+# powershell -ExecutionPolicy Bypass -File Install-Rus.ps1 -GamePath "C:\...\Death Must Die"
 ```
 
-Установщик сам найдёт игру через Steam (или укажи путь: `-GamePath "C:\...\Death Must Die"`),
-сделает резервную копию заменяемых файлов и выставит язык en в настройках игры
-(русский подставлен именно вместо английского).
-
 ## Удаление
+
+Дважды кликни `УДАЛИТЬ-русификатор.bat`, либо:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File Uninstall-Rus.ps1
@@ -50,6 +53,7 @@ powershell -ExecutionPolicy Bypass -File Uninstall-Rus.ps1
 ## Что внутри
 
 ```
+УСТАНОВИТЬ-русификатор.bat / УДАЛИТЬ-русификатор.bat   установка/удаление в один клик
 Install-Rus.ps1 / Uninstall-Rus.ps1   установщик / деинсталлятор
 catalog.json                          каталог Addressables (CRC снят с изменённых бандлов)
 StandaloneWindows64/                  русские таблицы строк (en + bg бандлы)
