@@ -95,7 +95,7 @@ python tools/74_patch_narrative.py # диалоги в sharedassets0
 
 ## Благодарности
 
-- [SamhainGhost](https://github.com/wericool) и его русификатор — рабочая схема каталога
+- [SamhainGhost](https://steamcommunity.com/sharedfiles/filedetails/?id=3752768587) и его русификатор — рабочая схема каталога
   и база для сравнения качества перевода.
 - Realm Archive — за игру.
 
