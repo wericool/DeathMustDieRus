@@ -37,7 +37,8 @@ function Write-Err($m)  { Write-Host $m -ForegroundColor Red }
 function Find-GamePath {
     $candidates = @()
     if ($GamePath) { $candidates += $GamePath }
-    $candidates += (Split-Path -Parent $PSScriptRoot)
+    $candidates += $PSScriptRoot                       # ZIP распакован прямо в папку игры
+    $candidates += (Split-Path -Parent $PSScriptRoot)  # ZIP распакован рядом с папкой игры
 
     $steam = $null
     foreach ($k in @('HKCU:\Software\Valve\Steam', 'HKLM:\SOFTWARE\WOW6432Node\Valve\Steam')) {
